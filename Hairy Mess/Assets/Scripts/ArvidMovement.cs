@@ -12,6 +12,10 @@ public class ArvidMovement : MonoBehaviour
 
     void Update()
     {
+        /*float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;*/
+        
         if (Input.GetAxis("Horizontal") != 0)
         {
             transform.Translate(transform.right * speed * Time.deltaTime * Input.GetAxis("Horizontal"), Space.World);
